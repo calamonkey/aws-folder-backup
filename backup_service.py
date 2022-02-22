@@ -30,3 +30,6 @@ response = client.put_object(
     Body=backup_tar_path + ".tar",
     ServerSideEncryption='aws:kms'
 )
+
+# Clean up file
+os.remove(backup_tar_path + ".tar")
